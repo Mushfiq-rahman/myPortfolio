@@ -1,0 +1,22 @@
+1. Database shift to Aurora - Already provided 
+2. Contingency Plan for system shut down
+- Both Database & Application 
+- Redis 
+- 8x Servers
+- 4x Aurora
+- 0/1 Code
+Ahnaf Tazwar3:57 PM
+3. Design Suggestions 
+Ahnaf Tazwar4:30 PM
+4. BusBD Payout account
+Merchant Account No. - 01727545460
+Naam, email address & phone number
+5. Aurora Implementation 
+6. Connectivity with Airtel Team 
+7. Loyalty - Personalized Code
+Ahnaf Tazwar4:44 PM
+8. Report Requirement from Rakib Bhai
+9. Test Pay out account for different accounting metrices
+Ahnaf Tazwar4:46 PM
+10. Short Route Scheduling - Automatic
+11. Launch BD = movement to 7.4 
