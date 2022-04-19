@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow: hidden;
   }
   
   .top-tags {
@@ -17,6 +18,9 @@
     left: 120px;
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
+    @media screen and (max-width: 480px) {
+      left: 68px;
+  }
   }
   
   .bottom-tag-html {
