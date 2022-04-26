@@ -1,21 +1,69 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import LogoTitle from '../../assets/images/logoM.png'
+import LogoTitle from '../../assets/images/logom1.png'
+import AnimatedLetters from '../AnimatedLetters'
+import Loader from 'react-loaders'
+import Logo from './Logo'
 import './index.scss'
 
 const Home = () => {
-  return <div className="container home-page">
+  const [letterClass, setLetterClass] = useState('text-animate')
+  const nameArray = ['u', 's', 'h', 'f', 'i', 'q']
+  const jobArray = [
+    'w',
+    'e',
+    'b',
+    '',
+    'd',
+    'e',
+    'v',
+    'e',
+    'l',
+    'o',
+    'p',
+    'e',
+    'r',
+  ]
+
+  useEffect(() => {
+    return setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 4000)
+  }, [])
+
+  return( 
+  <>
+    <div className="container home-page">
       <div className="text-zone">
-          <h1>Hi, <br/> I'm
-        <img src={LogoTitle} alt="developer" />
-        ushfiq
-        <br/>
-        web developer
+        <h1>
+          <span className={letterClass}>H</span>
+          <span className={`${letterClass} _12`}>i</span>
+          <br />
+          <span className={`${letterClass} _13`}>I</span>
+          <span className={`${letterClass} _12`}>'m</span>
+          <img src={LogoTitle} alt="developer" />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={nameArray}
+            idx={15}
+          />
+          <br />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={jobArray}
+            idx={22}
+          />
         </h1>
         <h2>Frontend Developer / React / Redux</h2>
-        <Link to='/contact' className='flat-button'>CONTACT ME</Link>
+        <Link to="/contact" className="flat-button">
+          CONTACT ME
+        </Link>
       </div>
-
-  </div>
+      <Logo />
+    </div>
+    <Loader  type="packman" />
+  </>
+  )
 }
 
 export default Home
